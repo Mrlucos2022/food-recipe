@@ -1,0 +1,140 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+}
+.topic{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    color: #ffffff;
+    flex-wrap: wrap;
+    background-color: hsla(0, 0%, 0%, 0.548);
+    height: 20px;
+    font-size: 6px;
+    gap: 2px;
+    padding-right: 5px;
+    border-right: 1px;
+}
+.topic img{
+    filter: grayscale(1);
+
+}
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    padding: 3px 6px;
+    box-shadow: 0px 0px 1px 0px #ff0000;
+}
+.search input{
+    width: 50%;
+    padding: 1px 3px;
+    border: none;
+    border-left: 1px solid lightslategrey;
+    border-bottom: 1px solid transparent;
+    line-height: 1.5px;
+    font-size: 12px;
+    outline: none;
+    line-height: 1.2;
+    outline: none;
+    transition: all 200ms ease-in-out;
+    box-shadow: 0px 0px 1px 0px #ff0000;
+   }
+.search input:focus{
+    border-left-color: transparent;
+    border-bottom-color: #ff0000;
+    width: 51%;
+}
+.btn{
+    background: transparent;
+    border-radius: 2px;
+    user-select: none;
+    font-size: 12px;
+    border: 1px solid #008000;
+    cursor: pointer;
+    transition: 1s ease-out;
+}
+.btn:hover{
+    background: #007bff;
+    border-color: #ffd700;
+    color: lightslategrey;
+}
+#recipecontainer{
+    text-align: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.recipe{
+    height: 120px;
+    width: 100px;
+    padding: 4px;
+    box-shadow: 0px 0px 2px 0px #0000ff;
+    margin: 3px;
+    transition: all 200ms ease-in-out;
+}
+.recipe-tittle{
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6px;
+}
+.recipe img{
+    height: 100%;
+    width: 100%;
+}
+.recipe-text{
+    height: 0px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 200ms ease-in-out;
+    background: rgba(0, 100, 110, 0.363);
+    margin-top: 2px;
+    overflow: hidden;
+    overflow-y: auto;
+    transform: scale(1);
+    transform-origin: top left;
+    
+}
+.recipe-text ul{
+    list-style: circle;
+    list-style-position: inside;
+    text-align: left;
+    padding: 1px;
+    font-size: 8px;
+
+}
+.recipe-text >li{
+    padding: 1px;
+}
+.recipe:hover .recipe-text{
+    height: 35px;
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+   
+}
+.recipe:hover{
+    height: 155px;
+}
+@media screen and (max-width: 1200px){
+    body{
+        background-color: #f0f8ff;
+        color: #a52a2a;
+    }
+}
+@media screen and (max-width: 600px){
+    body{
+        background-color: #0000ff;
+        color: #ffffff;
+    }
+}
